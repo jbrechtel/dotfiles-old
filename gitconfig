@@ -20,3 +20,6 @@
    untracked = cyan
 [format]
    pretty = format:"%h %C(yellow)%ci%Creset %Cgreen"
+[user]
+	name = jbrechtel
+	email = jbrechtel@gmail.com
