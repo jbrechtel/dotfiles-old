@@ -1,2 +1,5 @@
 alias ll="ls -al --color=auto"
 alias st="git status"
+alias emu16="emulator -avd Android16"
+alias emu21="emulator -avd Android21"
+alias emu23="emulator -avd Android23"
