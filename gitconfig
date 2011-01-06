@@ -23,3 +23,5 @@
 [user]
 	name = jbrechtel
 	email = jbrechtel@gmail.com
+[diff]
+	external = /home/jbrechtel/bin/diff.py

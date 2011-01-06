@@ -39,7 +39,7 @@ export SCALA_HOME=$HOME/opt/scala
 export ANDROID_SDK_HOME=$HOME/opt/android-sdk-linux_x86
 export JAVA_HOME=$HOME/opt/jre
 export JDK_HOME=$HOME/opt/jdk
-export PATH=$ANDROID_SDK_HOME/tools:$HOME/opt/jre/bin:$HOME/opt/jdk/bin:$HOME/opt/scala-2.8.1.final/bin:$HOME/bin:$PATH
+export PATH=$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$HOME/opt/jre/bin:$HOME/opt/jdk/bin:$HOME/opt/scala-2.8.1.final/bin:$HOME/bin:$PATH
 
 #aliases
 source $HOME/.aliases
