@@ -19,9 +19,7 @@
    changed = green
    untracked = cyan
 [format]
-   pretty = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
+   pretty = format:'%Cred%h%Creset -%Cblue%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
 [user]
-	name = jbrechtel
+	name = James Brechtel
 	email = jbrechtel@gmail.com
-[diff]
-	external = /home/jbrechtel/bin/diff.py

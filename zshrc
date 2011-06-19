@@ -35,11 +35,11 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #setup path and other environment variables
-export SCALA_HOME=$HOME/opt/scala
+export SCALA_HOME=$HOME/opt/typesafe-stack
 export ANDROID_SDK_HOME=$HOME/opt/android-sdk-linux_x86
-export JAVA_HOME=$HOME/opt/jre
+export JAVA_HOME=$HOME/opt/jdk
 export JDK_HOME=$HOME/opt/jdk
-export PATH=$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$HOME/opt/jre/bin:$HOME/opt/jdk/bin:$HOME/opt/scala-2.8.1.final/bin:$HOME/bin:$PATH
+export PATH=$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$HOME/opt/jre/bin:$HOME/opt/jdk/bin:$HOME/opt/typesafe-stack/bin:$HOME/bin:$PATH:$HOME/opt/play:$HOME/opt/apache-ant-1.8.2/bin
 
 #aliases
 source $HOME/.aliases
