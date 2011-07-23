@@ -35,7 +35,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #setup path and other environment variables
-export SCALA_HOME=$HOME/opt/scala-2.8.1.final
+export SCALA_HOME=$HOME/opt/scala
 export ANDROID_SDK_HOME=$HOME/opt/android-sdk-linux_x86
 export ANDROID_HOME=$ANDROID_SDK_HOME
 export JAVA_HOME=$HOME/opt/jdk
