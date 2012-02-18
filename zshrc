@@ -35,14 +35,11 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #setup path and other environment variables
+export JAVA_HOME=$HOME/opt/jdk1.6.0_25
 export SCALA_HOME=$HOME/opt/scala
-export ANDROID_SDK_HOME=$HOME/opt/android-sdk-linux_x86
+export ANDROID_SDK_HOME=$HOME/opt/android-sdk-linux
 export ANDROID_HOME=$ANDROID_SDK_HOME
-export JAVA_HOME=$HOME/opt/jdk
-export JDK_HOME=$HOME/opt/jdk
-export PATH=$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$HOME/opt/jre/bin:$HOME/opt/jdk/bin:$SCALA_HOME/bin:$HOME/bin:$PATH:$HOME/opt/play:$HOME/opt/apache-ant-1.8.2/bin:$HOME/opt/gradle/bin
+export PATH=$JAVA_HOME/bin:$HOME/opt/apache-ant-1.8.2/bin:$HOME/opt/gradle/bin:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$HOME/bin:$PATH:$HOME/opt/apache-maven-3.0.3/bin:$HOME/opt/play-2.0-beta
 
 #aliases
 source $HOME/.aliases
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

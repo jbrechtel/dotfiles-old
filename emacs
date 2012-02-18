@@ -73,3 +73,4 @@
 (require 'vimpulse)
 ;; MINI HOWTO: 
 ;; Open .scala file. M-x ensime (once per project)
+
