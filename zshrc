@@ -68,7 +68,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export ANDROID_HOME=/usr/local/Cellar/android-sdk/r18
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 export SCALA_HOME=$HOME/opt/scala
-export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/local/bin:$JAVA_HOME/bin:$HOME/opt/apache-ant-1.8.2/bin:$HOME/opt/gradle/bin:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$SCALA_HOME/bin:$HOME/bin:$PATH:$HOME/opt/apache-maven-3.0.3/bin:$HOME/opt/play-2.0
+export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/local/bin:$JAVA_HOME/bin:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$HOME/bin:$HOME/opt/play-2.0:$PATH
+export SBT_OPTS="-XX:MaxPermSize=512M"
 
 #aliases
 source $HOME/.aliases
