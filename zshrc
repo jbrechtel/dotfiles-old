@@ -70,6 +70,7 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 export SCALA_HOME=$HOME/opt/scala
 export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/local/bin:$JAVA_HOME/bin:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$HOME/bin:$HOME/opt/play-2.0:$PATH
 export SBT_OPTS="-XX:MaxPermSize=512M"
+export EDITOR=`which vim`
 
 #aliases
 source $HOME/.aliases
