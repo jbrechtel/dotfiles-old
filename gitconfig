@@ -1,5 +1,6 @@
 [core]
    safecrlf = true
+   pager = "less -X"
 [alias]
    co = checkout
    ci = commit
