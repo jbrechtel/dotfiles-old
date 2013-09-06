@@ -1,3 +1,4 @@
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -68,7 +69,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export ANDROID_HOME=/usr/local/Cellar/android-sdk/r18
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
 export SCALA_HOME=$HOME/opt/scala
-export PATH=$HOME/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/local/bin:$JAVA_HOME/bin:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$HOME/opt/play-2.0:$PATH
+export PATH=$HOME/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/local/sbin:/usr/local/bin:$JAVA_HOME/bin:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$HOME/opt/play-2.0:/Applications/git-annex.app/Contents/MacOS:$PATH
 export SBT_OPTS="-XX:MaxPermSize=512M"
 export EDITOR=`which vim`
 export VIMCLOJURE_SERVER_JAR="$HOME/opt/vim-clojure-nailgun/server-2.3.6.jar"
@@ -76,3 +77,4 @@ export VIMCLOJURE_SERVER_JAR="$HOME/opt/vim-clojure-nailgun/server-2.3.6.jar"
 #aliases
 source $HOME/.aliases
 eval "$(rbenv init -)"
+
