@@ -1,0 +1,5 @@
+highlight! Hint font-size: 11px; color: black; font-weight: bold; font-family: Helvetica, Arial, sans-serif; border: 1px solid #E3BE23; background-color: #FFEBB6; text-transform: uppercase
+highlight! HintElem background-color: transparent
+highlight! HintActive background-color: transparent
+
+autocmd LocationChange .* :js modes.passAllKeys = /mail\.google\.com/.test(buffer.URL)

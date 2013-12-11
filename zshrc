@@ -1,4 +1,3 @@
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -6,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="clean"
+ZSH_THEME="fino"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -16,7 +15,7 @@ ZSH_THEME="clean"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -66,15 +65,15 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #setup path and other environment variables
-export ANDROID_HOME=/usr/local/Cellar/android-sdk/r18
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
-export SCALA_HOME=$HOME/opt/scala
-export PATH=$HOME/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/local/sbin:/usr/local/bin:$JAVA_HOME/bin:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$HOME/opt/play-2.0:/Applications/git-annex.app/Contents/MacOS:$PATH
+export PATH=$HOME/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH
 export SBT_OPTS="-XX:MaxPermSize=512M"
 export EDITOR=`which vim`
 export VIMCLOJURE_SERVER_JAR="$HOME/opt/vim-clojure-nailgun/server-2.3.6.jar"
 
 #aliases
 source $HOME/.aliases
-eval "$(rbenv init -)"
+eval "$(rbenv init - --no-rehash)"
 
+#jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
