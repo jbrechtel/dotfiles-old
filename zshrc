@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="fino"
+ZSH_THEME="candy"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -42,6 +42,7 @@ source $ZSH/oh-my-zsh.sh
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
+HIST_IGNORE_SPACE="true"
 
 # Use modern completion system
 autoload -Uz compinit
@@ -77,3 +78,6 @@ eval "$(rbenv init - --no-rehash)"
 #jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+source /usr/bin/aws_zsh_completer.sh
+export BUILDDIR=$HOME/packages
