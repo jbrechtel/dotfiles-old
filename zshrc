@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="candy"
+ZSH_THEME="ys"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -17,19 +17,14 @@ ZSH_THEME="candy"
 # Comment this out to disable weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+
+[[ -z $DZ ]] && plugins=(git ruby aws bundler gpg-agent gitfast git-extras vi-mode tmux web-search)
+
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOSTART_ONCE="false"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,8 +34,8 @@ source $ZSH/oh-my-zsh.sh
 #bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.zsh_history
 HIST_IGNORE_SPACE="true"
 
@@ -65,19 +60,14 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-#setup path and other environment variables
-export PATH=$HOME/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH
-export SBT_OPTS="-XX:MaxPermSize=512M"
-export EDITOR=`which vim`
-export VIMCLOJURE_SERVER_JAR="$HOME/opt/vim-clojure-nailgun/server-2.3.6.jar"
+source ~/.secrets
+source ~/.exports
 
-#aliases
 source $HOME/.aliases
-eval "$(rbenv init - --no-rehash)"
 
-#jenv
-export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(rbenv init - --no-rehash)"
 eval "$(jenv init -)"
 
-source /usr/bin/aws_zsh_completer.sh
-export BUILDDIR=$HOME/packages
+bindkey '^R' history-incremental-search-backward
+
+[ -n "$TMUX" ] && export TERM=screen-256color

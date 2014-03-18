@@ -1,0 +1,6 @@
+export JRUBY_OPTS="-J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-noverify"
+export PATH=$HOME/bin:$HOME/.rbenv/shims:$HOME/.jenv/bin:$HOME/.rbenv/bin:$HOME/opt/raspberrypi/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH
+export SBT_OPTS="-XX:MaxPermSize=512M"
+export EDITOR=`which vim`
+export VIMCLOJURE_SERVER_JAR="$HOME/opt/vim-clojure-nailgun/server-2.3.6.jar"
+export DRIP_INIT_CLASS="org.jruby.main.DripMain"

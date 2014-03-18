@@ -1,6 +1,7 @@
 [core]
    safecrlf = true
    pager = "less -FX"
+	excludesfile = /home/jbrechtel/.gitignore_global
 [alias]
    co = checkout
    ci = commit
