@@ -21,7 +21,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-[[ -z $DZ ]] && plugins=(git ruby aws bundler gpg-agent gitfast git-extras vi-mode tmux web-search)
+[[ -z $DZ ]] && plugins=(git aws gpg-agent gitfast git-extras vi-mode web-search)
 
 ZSH_TMUX_AUTOSTART="true"
 ZSH_TMUX_AUTOSTART_ONCE="false"
@@ -65,8 +65,10 @@ source ~/.exports
 
 source $HOME/.aliases
 
-eval "$(rbenv init - --no-rehash)"
+source $HOME/work/dotfiles/pass.zsh-completion
+
 eval "$(jenv init -)"
+eval "$(rbenv init - --no-rehash)"
 
 bindkey '^R' history-incremental-search-backward
 

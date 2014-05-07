@@ -4,3 +4,4 @@ export SBT_OPTS="-XX:MaxPermSize=512M"
 export EDITOR=`which vim`
 export VIMCLOJURE_SERVER_JAR="$HOME/opt/vim-clojure-nailgun/server-2.3.6.jar"
 export DRIP_INIT_CLASS="org.jruby.main.DripMain"
+export ALTERNATE_EDITOR=""
