@@ -36,11 +36,12 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 bindsym $mod+d exec --no-startup-id "dmenu_run -fn 'Monofur-16'"
+bindsym $mod+l exec "lock"
 
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
+# bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -88,11 +89,11 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
+bindsym $mod+1 workspace 1: browser
+bindsym $mod+2 workspace 2: terminal
+bindsym $mod+3 workspace 3: editor
+bindsym $mod+4 workspace 4: chat
+bindsym $mod+5 workspace 5: mail
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -100,11 +101,11 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+1 move container to workspace 1: browser
+bindsym $mod+Shift+2 move container to workspace 2: terminal
+bindsym $mod+Shift+3 move container to workspace 3: editor
+bindsym $mod+Shift+4 move container to workspace 4: chat
+bindsym $mod+Shift+5 move container to workspace 5: mail
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -144,6 +145,7 @@ mode "resize" {
 
 bindsym $mod+x move workspace to output right
 bindsym $mod+r mode "resize"
+bindsym $mod+m exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -162,12 +164,12 @@ exec "eval $(cat ~/.fehbg)"
 exec "pidgin"
 exec "thunar --daemon"
 
-assign [class="^Firefox$"] → 1
-assign [class="^Gnome-terminal$"] → 2
-assign [class="^jetbrains-idea-ce$"] → 3
-assign [class="^Emacs$"] → 3
-assign [class="^Pidgin$"] → 4
-assign [class="^Thunderbird$"] → 5
+assign [class="^Firefox$"] → 1: browser
+assign [class="^Gnome-terminal$"] → 2: terminal
+assign [class="^jetbrains-idea-ce$"] → 3: editor
+assign [class="^Emacs$"] → 3: editor
+assign [class="^Pidgin$"] → 4: chat
+assign [class="^Thunderbird$"] → 5: mail
 assign [class="^sun-awt-X11-XFramePeer$"] → 9
 
 
